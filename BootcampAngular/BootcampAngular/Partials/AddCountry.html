@@ -1,0 +1,18 @@
+﻿<div style="margin-left:30px; width:300px">
+    <h3>Adding Country</h3>
+    {{message}}
+
+    <form name="AddCountryForm" ng-submit="AddCountry();">
+        <div class="form-group">
+            <label for="country.Name">Name</label>
+            <input type="text" class="form-control" ng-model="country.Name" required />
+        </div>
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Submit" ng-disabled="AddCountryForm.$invalid" />
+        </div>
+    </form>
+
+    <br />
+    <a href="#/" class="btn btn-primary">Back to Menu</a>
+
+</div>

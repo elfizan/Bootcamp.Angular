@@ -1,0 +1,32 @@
+﻿<div style="margin-left:30px; width:300px">
+    <h3>Edit Player</h3>
+    {{message}}
+
+    <form name="EditPlayerForm" ng-submit="EditPlayer();">
+        <div class="form-group">
+            <label for="player.Name">Name</label>
+            <input type="text" class="form-control" ng-model="player.Name" required />
+        </div>
+        <div class="form-group">
+            <label for="player.Club">Club</label>
+            <input type="text" class="form-control" ng-model="player.Club" required/>
+        </div>
+        <div class="form-group">
+            <label for="player.Countries" class="control-label">Country</label>
+            <select class="form-control" ng-model="player.Countries.Id">
+                <option data-ng-repeat="country in listCountry" value="{{country.Id}}">{{country.Name}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="player.Age">Age</label>
+            <input type="text" class="form-control" ng-model="player.Age" required />
+        </div>
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-success" value="Update" ng-disabled="EditPlayerForm.$invalid" />
+        </div>
+    </form>
+
+    <br />
+    <a href="#/" class="btn btn-primary">Back to Menu</a>
+</div>

@@ -1,0 +1,24 @@
+﻿<div style="margin-left:30px; width:500px">
+    <h3>List of Country</h3>
+    {{message}}
+    <br />
+    <br />
+    <a href="#/AddCountry" class=" btn btn-primary">Add Country</a>
+    <br />
+    <br />
+    <table class="table table-bordered">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        <tr ng-repeat="country in listCountry">
+            <td>{{$index+1}}</td>
+            <td>{{country.Name}}</td>
+            <td>
+                <a href="#/UpdateCountry/{{country.Id}}">Edit |</a>
+                <a href="#/" ng-click="DeleteCountry(country.Id,$index)">Delete</a>
+            </td>
+        </tr>
+    </table>
+</div>

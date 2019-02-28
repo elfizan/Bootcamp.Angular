@@ -1,0 +1,5 @@
+Angular :2
+1. App
+2. Controller
+
+Mapping: 
